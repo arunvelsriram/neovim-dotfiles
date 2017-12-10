@@ -85,7 +85,8 @@ Plug 'tomasr/molokai'
 Plug 'skwp/YankRing.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'tomasiser/vim-code-dark'
-
+Plug 'valloric/youcompleteme'
+Plug 'w0ng/vim-hybrid'
 
 " c
 Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
@@ -193,7 +194,8 @@ if !exists('g:not_finish_vimplug')
   colorscheme railscasts
 endif
 
-colorscheme codedark
+set background=dark
+colorscheme hybrid
 
 set mousemodel=popup
 set t_Co=256
@@ -272,10 +274,10 @@ let g:NERDTreeShowBookmarks=1
 let g:nerdtree_tabs_focus_on_files=1
 let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
 let g:NERDTreeWinSize = 50
-let g:NERDTreeWinSize = 30
 let NERDTreeShowHidden = 1
 let NERDTreeDirArrows = 1
 let NERDTreeMinimalUI = 1
+let g:NERDTreeWinPos = "right"
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 noremap <F3> :NERDTreeToggle<CR>
@@ -288,6 +290,7 @@ function! OpenNerdTree()
     endif
 endfunction
 nnoremap <silent> <C-\> :call OpenNerdTree()<CR>
+
 
 " grep.vim
 nnoremap <silent> <leader>f :Rgrep<CR>
